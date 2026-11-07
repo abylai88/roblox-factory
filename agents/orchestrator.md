@@ -101,7 +101,7 @@ build
 
 После изменения кода:
 
-1. `rojo build default.project.json -o build/game.rbxlx`;
+1. `rojo build default.project.json -o game.rbxlx`;
 2. `selene src`;
 3. `stylua --check src`;
 4. проверь ошибки;

@@ -30,7 +30,12 @@ function DailyRewardService.claim(player: Player): (boolean, string)
 
 	local waitSeconds = DailyRewardService.secondsUntilNext(data)
 	if waitSeconds > 0 then
-		return false, string.format("Следующая награда через %d ч %d мин", waitSeconds // 3600, (waitSeconds % 3600) // 60)
+		return false,
+			string.format(
+				"Следующая награда через %d ч %d мин",
+				waitSeconds // 3600,
+				(waitSeconds % 3600) // 60
+			)
 	end
 
 	local now = os.time()

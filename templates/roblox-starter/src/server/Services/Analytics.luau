@@ -17,7 +17,14 @@ local function safe(label: string, fn: () -> ())
 end
 
 -- Currency earned (source). transactionType: Enum.AnalyticsEconomyTransactionType name.
-function Analytics.earn(player: Player, currency: string, amount: number, balance: number, transactionType: string, sku: string?)
+function Analytics.earn(
+	player: Player,
+	currency: string,
+	amount: number,
+	balance: number,
+	transactionType: string,
+	sku: string?
+)
 	safe("earn", function()
 		AnalyticsService:LogEconomyEvent(
 			player,
@@ -32,7 +39,14 @@ function Analytics.earn(player: Player, currency: string, amount: number, balanc
 end
 
 -- Currency spent (sink).
-function Analytics.spend(player: Player, currency: string, amount: number, balance: number, transactionType: string, sku: string?)
+function Analytics.spend(
+	player: Player,
+	currency: string,
+	amount: number,
+	balance: number,
+	transactionType: string,
+	sku: string?
+)
 	safe("spend", function()
 		AnalyticsService:LogEconomyEvent(
 			player,

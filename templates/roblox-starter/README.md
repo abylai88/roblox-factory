@@ -14,7 +14,7 @@ rojo serve             # then in Roblox Studio: Rojo plugin → Connect
 Or build a place file and open it in Studio:
 
 ```bash
-rojo build default.project.json -o build/game.rbxlx
+rojo build default.project.json -o game.rbxlx
 ```
 
 ## Before publishing

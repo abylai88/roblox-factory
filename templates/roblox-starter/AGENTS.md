@@ -37,7 +37,7 @@ Each service has `start()`. Register new ones in `Main.server.luau` (keep `DataS
 
 ```bash
 rokit install                                   # once, installs rojo/selene/stylua from rokit.toml
-rojo build default.project.json -o build/game.rbxlx
+rojo build default.project.json -o game.rbxlx
 selene src
 stylua --check src
 ```

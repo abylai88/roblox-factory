@@ -39,7 +39,7 @@ You validate that the Builder's implementation actually works and did not introd
 
 ## Responsibilities
 
-1. Run the Roblox checks: `rojo build default.project.json -o build/game.rbxlx`, `selene src`, `stylua --check src` (and `lune run test` if the project has tests). If a tool is missing, report it — do not mark it as passed.
+1. Run the Roblox checks: `rojo build default.project.json -o game.rbxlx`, `selene src`, `stylua --check src` (and `lune run test` if the project has tests). If a tool is missing, report it — do not mark it as passed.
 2. Exercise the changed flows and their neighbors to catch regressions and runtime problems (nil checks after `DataService.get`, remotes without validation or rate limit, ProcessReceipt idempotency, data template changes that break old saves, leaked connections).
 3. Confirm every acceptance criterion from the design is actually met with evidence.
 4. Reproduce any suspected bug to confirm it before reporting it.

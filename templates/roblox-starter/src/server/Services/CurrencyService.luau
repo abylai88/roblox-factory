@@ -17,9 +17,11 @@ local CURRENCY = "Coins"
 
 local CurrencyService = {}
 
-local multiplierFn: (Player) -> number = function()
+local function defaultMultiplier(_player: Player): number
 	return 1
 end
+
+local multiplierFn: (Player) -> number = defaultMultiplier
 
 function CurrencyService.setMultiplier(fn: (Player) -> number)
 	multiplierFn = fn

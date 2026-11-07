@@ -118,7 +118,9 @@ local function loadPlayer(player: Player)
 			)
 		else
 			warn("[DataService] Load failed for", player.UserId, saved)
-			player:Kick("Не удалось загрузить сохранение. Перезайди, пожалуйста. / Could not load your data, please rejoin.")
+			player:Kick(
+				"Не удалось загрузить сохранение. Перезайди, пожалуйста. / Could not load your data, please rejoin."
+			)
 			return
 		end
 	end

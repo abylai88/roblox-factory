@@ -1,0 +1,6 @@
+# Keep LF line endings on every OS (StyLua and Rojo expect them).
+* text=auto eol=lf
+*.rbxl binary
+*.rbxm binary
+*.png binary
+*.jpg binary

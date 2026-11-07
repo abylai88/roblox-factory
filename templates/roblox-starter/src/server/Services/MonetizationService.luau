@@ -102,7 +102,8 @@ function MonetizationService.prompt(player: Player, kind: string, key: string)
 			return
 		end
 		if pass.Id == 0 then
-			Remotes.get("Notify"):FireClient(player, "Game pass не настроен: впиши Id в Config.Monetization")
+			Remotes.get("Notify")
+				:FireClient(player, "Game pass не настроен: впиши Id в Config.Monetization")
 			return
 		end
 		Analytics.custom(player, "PromptPass_" .. key)
@@ -113,7 +114,8 @@ function MonetizationService.prompt(player: Player, kind: string, key: string)
 			return
 		end
 		if product.Id == 0 then
-			Remotes.get("Notify"):FireClient(player, "Продукт не настроен: впиши Id в Config.Monetization")
+			Remotes.get("Notify")
+				:FireClient(player, "Продукт не настроен: впиши Id в Config.Monetization")
 			return
 		end
 		Analytics.custom(player, "PromptProduct_" .. key)
@@ -171,14 +173,7 @@ local function processReceipt(receipt)
 	end
 
 	for field, amount in product.Grant do
-		Analytics.earn(
-			player,
-			field,
-			amount,
-			data[field],
-			Enum.AnalyticsEconomyTransactionType.IAP.Name,
-			key
-		)
+		Analytics.earn(player, field, amount, data[field], Enum.AnalyticsEconomyTransactionType.IAP.Name, key)
 	end
 	Remotes.get("Notify"):FireClient(player, "Спасибо за покупку! +" .. product.Name)
 	return Enum.ProductPurchaseDecision.PurchaseGranted

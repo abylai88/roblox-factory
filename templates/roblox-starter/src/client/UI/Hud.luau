@@ -45,7 +45,7 @@ function Hud.create(playerGui: PlayerGui)
 	panel.Name = "Panel"
 	panel.AnchorPoint = Vector2.new(0, 0.5)
 	panel.Position = UDim2.new(0, 16, 0.5, 0)
-	panel.Size = UDim2.new(0.22, 0, 0.6, 0)
+	panel.Size = UDim2.fromScale(0.22, 0.6)
 	panel.BackgroundTransparency = 1
 	panel.Parent = gui
 

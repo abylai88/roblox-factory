@@ -23,7 +23,7 @@ export interface Pipeline {
 }
 
 const ROBLOX_CHECKS =
-  "Проверки: `rojo build default.project.json -o build/game.rbxlx`, `selene src`, `stylua --check src`.";
+  "Проверки: `rojo build default.project.json -o game.rbxlx`, `selene src`, `stylua --check src`.";
 
 /**
  * Full Roblox game pipeline — from market research to a playable first release.

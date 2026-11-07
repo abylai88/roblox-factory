@@ -418,7 +418,7 @@ describe("security denials", () => {
 
 describe("tester role permissions", () => {
   it("tester rojo build allow", () => {
-    const cmd = "rojo build default.project.json -o build/game.rbxlx";
+    const cmd = "rojo build default.project.json -o game.rbxlx";
     expect(evaluateBashCommand(cmd, PROFILES.tester.bash)).toBe("allow");
   });
 
@@ -460,7 +460,7 @@ describe("builder role permissions", () => {
   });
 
   it("builder rojo build allow", () => {
-    expect(evaluateBashCommand("rojo build default.project.json -o build/game.rbxlx", PROFILES.builder.bash)).toBe("allow");
+    expect(evaluateBashCommand("rojo build default.project.json -o game.rbxlx", PROFILES.builder.bash)).toBe("allow");
   });
 
   it("builder rm -rf deny", () => {

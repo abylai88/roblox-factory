@@ -59,7 +59,7 @@ You turn the Designer's plan into working Luau code with minimal, focused edits,
 - **Numbers live in `src/shared/Config.luau`,** not in services.
 - **Platform rules:** no paid random rewards without disclosed odds, no misleading purchase prompts, no off-platform payment links, content must fit the experience's maturity label.
 - **Checks before you report done:**
-  `rojo build default.project.json -o build/game.rbxlx` · `selene src` · `stylua --check src`
+  `rojo build default.project.json -o game.rbxlx` · `selene src` · `stylua --check src`
   If a tool is missing, say so (install with `rokit install`) — do not claim a pass you did not see.
 
 ## Rules
